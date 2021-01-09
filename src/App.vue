@@ -466,19 +466,19 @@
         ],
         articles: [
           {
-            src: 'https://user-images.githubusercontent.com/17768955/101504996-22564200-3974-11eb-9096-62144d25318c.jpg',
+            src: require('./assets/ZED_FYI_Team.jpg'),
             title: 'Winning the Airbus FYI competition',
             text: 'Under the name of Zero Heroes, ZED has won the prestigious Airbus Fly Your Ideas price. From 300 steams ZED convinced the jury with their energy harvesting solutions inside aircrafts.',
             link: 'https://www.airbus.com/newsroom/press-releases/en/2019/06/pioneering-student-team-from-the-netherlands-wins-airbus-fly-your-ideas-2019-global-competition.html'
           },
           {
-            src: 'https://user-images.githubusercontent.com/17768955/102208298-87a7b700-3ecf-11eb-964e-4f9fabb56b59.PNG',
+            src: require('./assets/ZED_Impact_competition.png'),
             title: 'Winning the 4TU Impact challenge',
             text: 'After wining the TU-Delft impact competition, ZED wins the national 4TU Impact challenge. Winning tickets to the World Expo in Dubai, where ZED will join the Dutch trade delegation representing the Netherlands.',
             link: 'https://4tuimpactchallenge.nl/news/384'
           },
           {
-            src: 'https://user-images.githubusercontent.com/17768955/102208431-b32aa180-3ecf-11eb-84fe-d984551ce524.jpg',
+            src: require('./assets/ZED_FYI_Price.jpg'),
             title: 'Delta, TuDelft article',
             text: 'Read why smart electronics are becoming battery free.',
             link: 'https://www.delta.tudelft.nl/article/why-smart-electronics-are-becoming-battery-free'
