@@ -478,7 +478,7 @@
             link: 'https://4tuimpactchallenge.nl/news/384'
           },
           {
-            src: require('./assets/ZED_FYI_Price.jpg'),
+            src: require('./assets/ZED_Delta_Team.jpg'),
             title: 'Delta, TuDelft article',
             text: 'Read why smart electronics are becoming battery free.',
             link: 'https://www.delta.tudelft.nl/article/why-smart-electronics-are-becoming-battery-free'
