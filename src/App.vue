@@ -494,27 +494,34 @@
           {
             image: require('./assets/ZED_icon_White_Transportation.png'),
             title: 'Smart Transportation',
-            text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.'
-          },
-          {
-            image: require('./assets/ZED_icon_White_Detection.png'),
-            title: 'Flood Detection',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam'
-          },
-          {
-            image: require('./assets/ZED_icon_White_weatherstations.png'),
-            title: 'Perpetual Weather Stations',
-            text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto cupiditate sint possimus quidem atque harum excepturi nemo velit tempora! Enim inventore fuga, qui ipsum eveniet facilis obcaecati corrupti asperiores nam'
+            text: 'Scalable energy harvesting sensors offer a cheap time-efficient way of controlling logistics.' +
+                'By for example measuring the seat occupancy, or detecting whether freight is correctly secured.'
           },
           {
             image: require('./assets/ZED_icon_White_Inventory.png'),
             title: 'Inventory Management',
-            text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.'
+            text: 'Zero energy devices are able to detect the volumes of inventory that is held at the warehouses.' +
+                'The batteryless sensors measure when inventory is low and wirelessly transmitted to a management system.'
+          },
+          {
+            image: require('./assets/ZED_icon_White_Detection.png'),
+            title: 'Flood Detection',
+            text: 'By applying large numbers of zero energy devices into dikes, they can warn when the tides become too high.' +
+                'Without the need for wires which must be dug into the ground weakening the dikes.'
           },
           {
             image: require('./assets/ZED_icon_White_Agriculture.png'),
             title: 'Precision Agriculture',
-            text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.'
+            text: 'Agriculture is becoming high tech, helping optimising yields.' +
+                'With the limitation of not being able to put wires into the ground,' +
+                'ZED’s wireless and batteryless device can be used to measure crop,' +
+                'soil and air quality throughout large fields.'
+          },
+          {
+            image: require('./assets/ZED_icon_White_weatherstations.png'),
+            title: 'Perpetual Weather Stations',
+            text: 'With self powered weather stations from ZED throughout the city,' +
+                'the much needed fine-grained data can be collected, improving weather predictions. '
           }
         ],
         team: [
