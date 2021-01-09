@@ -488,7 +488,8 @@
           {
             image: require('./assets/ZED_icon_White_Maintenance.png'),
             title: 'Large scale Predictive Maintenance',
-            text: 'Sed ut elementum justo. Suspendisse non justo enim. Vestibulum cursus mauris dui, a luctus ex blandit. Lorem ipsum dolor sit amet consectetur adipisicing elit. qui ipsum eveniet facilis obcaecati corrupti consectetur adipisicing elit.'
+            text: 'Masses of sensors spread across large areas detecting abnormalities reducing down time of systems,' +
+                'only becomes feasible with low cost and low maintenance i.e. batteryless and wireless sensors.'
           },
           {
             image: require('./assets/ZED_icon_White_Transportation.png'),
