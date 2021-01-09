@@ -22,3 +22,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### To host latest updates
+```
+npm run build
+copy and replace all files from /dist to /docs
+```
