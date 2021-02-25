@@ -457,12 +457,13 @@
     data () {
       return {
         drawer: false,
-        email: 'info@ZED-IoT.nl',
+        email: 'info@ZED-IoT.com',
         menu: [
           { text: 'About us', link: '#about-us' },
           { text: 'Features', link: '#features' },
           { text: 'The team', link: '#team' },
-          { text: 'News', link: '#news' }
+          { text: 'News', link: '#news' },
+          { text: 'Contact', link: '#contact' }
         ],
         articles: [
           {
@@ -534,6 +535,11 @@
             image: require('./assets/Niels.jpg'),
             name: 'Ir. N.H. Hokke',
             text: 'Niels, a recent graduate supervised by VP, worked on the topic of batteryless wireless communication in his masters at TU Delft. Instead of starting as a PhD and adding more research papers into an already full archive, Niels instead believes in transforming state of the art research into real life tangible products for the benefit of society. As CEO, Niels is fully focusing all of his time on building up ZED as a vehicle which can move our innovation from the labs of the university onto the industrial factory floor where it can truly make a difference saving time and money for our clients.'
+          },
+          {
+            image: require('./assets/John.jpg'),
+            name: 'Dr. J.E.J. Schmitz',
+            text: 'Dr. John Schmitz recently retired as the dean of the faculty of Electrical Engineering, Mathematics and Computer Science (EEMCS or EWI in Dutch) at the Technical University of Delft. Before this, John was SVP and Chief Intellectual Property Officer of NXP Semiconductors. He is attributed as the co-founder of NXP Semiconductors and has immense technical, scientific and commercial experience. He is advising ZED as honorary president on both technical and commercial aspects where he directs, mentors and guides the team to becoming a successful startup.  '
           },
           {
             image: require('./assets/Suryansh.jpg'),
