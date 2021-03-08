@@ -1,0 +1,9 @@
+{
+  "menu": [
+    { "text": "Über uns", "link": "#about-us" },
+    { "text": "Eigenschaften", "link": "#features" },
+    { "text": "Die Mannschaft", "link": "#team" },
+    { "text": "Nachrichten", "link": "#news" },
+    { "text": "Kontakt", "link": "#contact" }
+  ]
+}
