@@ -1,12 +1,20 @@
 <template>
   <v-app>
-
-    <v-navigation-drawer app v-if="$vuetify.breakpoint.smAndDown" v-model="drawer">
+    <v-navigation-drawer
+      app
+      v-if="$vuetify.breakpoint.smAndDown"
+      v-model="drawer"
+    >
       <v-list nav>
         <v-list-item-group
-            active-class="primary--text text--accent-4"
+          active-class="primary--text text--accent-4"
         >
-          <v-list-item v-for="({text, link}, i) in menu" :key="i" :href="link" @click.stop="drawer = !drawer">
+          <v-list-item
+            v-for="({text, link}, i) in menu"
+            :key="i"
+            :href="link"
+            @click.stop="drawer = !drawer"
+          >
             <v-list-item-title>{{ text }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
@@ -14,25 +22,33 @@
     </v-navigation-drawer>
 
     <v-app-bar
-        app
-        color="white"
-        height="100"
-        :hide-on-scroll="$vuetify.breakpoint.smAndDown"
+      app
+      color="white"
+      height="100"
+      :hide-on-scroll="$vuetify.breakpoint.smAndDown"
     >
-      <v-app-bar-nav-icon v-if="$vuetify.breakpoint.smAndDown" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        v-if="$vuetify.breakpoint.smAndDown"
+        @click.stop="drawer = !drawer"
+      />
 
       <v-img
-          contain
-          :class="{ 'center-image': $vuetify.breakpoint.smAndDown }"
-          max-height="70%"
-          max-width="200"
-          :src="require('./assets/ZED_Logo_02.png')"
-          style="cursor: pointer"
-          onclick="window.scrollTo({  top: 0,  left: 0 });"
-      ></v-img>
-      <v-spacer></v-spacer>
-      <div v-if="$vuetify.breakpoint.mdAndUp" >
-        <v-btn text v-for="({text, link}, i) in menu" :key="i" :href="link">
+        contain
+        :class="{ 'center-image': $vuetify.breakpoint.smAndDown }"
+        max-height="70%"
+        max-width="200"
+        :src="require('./assets/ZED_Logo_02.png')"
+        style="cursor: pointer"
+        onclick="window.scrollTo({  top: 0,  left: 0 });"
+      />
+      <v-spacer />
+      <div v-if="$vuetify.breakpoint.mdAndUp">
+        <v-btn
+          text
+          v-for="({text, link}, i) in menu"
+          :key="i"
+          :href="link"
+        >
           {{ text }}
         </v-btn>
       </div>
@@ -42,41 +58,40 @@
       <section id="hero">
         <v-row no-gutters>
           <v-img
-              :height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              :src="require('./assets/ZED_FYI_Price.jpg')"
+            :height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+            :src="require('./assets/ZED_FYI_Price.jpg')"
           >
             <v-theme-provider dark>
               <v-container fill-height>
                 <v-row
-                    align="center"
-                    class="white--text mx-auto"
-                    justify="center"
+                  align="center"
+                  class="white--text mx-auto"
+                  justify="center"
                 >
                   <v-col
-                      class="white--text text-center"
-                      cols="12"
-                      tag="h1"
+                    class="white--text text-center"
+                    cols="12"
+                    tag="h1"
                   >
                     <span
-                        :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
-                        class="font-weight-light"
+                      :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
+                      class="font-weight-light"
                     >
                       Are you ready to be
                     </span>
                     <br>
                     <span
-                        :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
-                        class="font-weight-black"
+                      :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
+                      class="font-weight-black"
                     >
                       amaZED?
                     </span>
-
                   </v-col>
                   <v-btn
-                      class="align-self-end"
-                      fab
-                      outlined
-                      href="#about-us"
+                    class="align-self-end"
+                    fab
+                    outlined
+                    href="#about-us"
                   >
                     <v-icon>mdi-chevron-double-down</v-icon>
                   </v-btn>
@@ -88,23 +103,25 @@
       </section>
 
       <section id="about-us">
-        <div class="py-12"></div>
+        <div class="py-12" />
 
         <v-container class="text-center">
-          <h2 class="display-2 font-weight-bold mb-3">About us</h2>
+          <h2 class="display-2 font-weight-bold mb-3">
+            About us
+          </h2>
 
           <v-responsive
-              class="mx-auto mb-8"
-              width="56"
+            class="mx-auto mb-8"
+            width="56"
           >
-            <v-divider class="mb-1"></v-divider>
+            <v-divider class="mb-1" />
 
-            <v-divider></v-divider>
+            <v-divider />
           </v-responsive>
 
           <v-responsive
-              class="mx-auto title font-weight-light mb-8"
-              max-width="720"
+            class="mx-auto title font-weight-light mb-8"
+            max-width="720"
           >
             Zero Energy Development or ZED for short is a business to business IoT solution provider.
             With more than 30 years of combined research experience in Wireless and Batteryless technologies,
@@ -121,32 +138,32 @@
           </v-responsive>
         </v-container>
 
-        <div class="py-12"></div>
+        <div class="py-12" />
       </section>
 
       <section id="switch">
         <v-parallax
-            :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-            :src="require('./assets/ZED_Switch.png')"
+          :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
+          :src="require('./assets/ZED_Switch.png')"
         >
           <v-container fill-height>
             <v-row class="mx-auto">
               <v-col
-                  v-for="[value, title] of stats"
-                  :key="title"
-                  cols="12"
-                  md="3"
+                v-for="[value, title] of stats"
+                :key="title"
+                cols="12"
+                md="3"
               >
                 <div class="text-center">
                   <div
-                      class="display-3 font-weight-black mb-4"
-                      v-text="value"
-                  ></div>
+                    class="display-3 font-weight-black mb-4"
+                    v-text="value"
+                  />
 
                   <div
-                      class="title font-weight-regular text-uppercase"
-                      v-text="title"
-                  ></div>
+                    class="title font-weight-regular text-uppercase"
+                    v-text="title"
+                  />
                 </div>
               </v-col>
             </v-row>
@@ -155,94 +172,95 @@
       </section>
 
       <section
-          id="features"
-          class="grey lighten-3"
+        id="features"
+        class="grey lighten-3"
       >
-        <div class="py-12"></div>
+        <div class="py-12" />
 
         <v-container class="text-center">
-          <h2 class="display-2 font-weight-bold mb-3">Features</h2>
+          <h2 class="display-2 font-weight-bold mb-3">
+            Features
+          </h2>
 
           <v-responsive
-              class="mx-auto mb-12"
-              width="56"
+            class="mx-auto mb-12"
+            width="56"
           >
-            <v-divider class="mb-1"></v-divider>
-            <v-divider></v-divider>
+            <v-divider class="mb-1" />
+            <v-divider />
           </v-responsive>
 
           <v-row>
             <v-col
-                class="d-flex"
-                align-self="stretch"
-                v-for="({ image, title, text }, i) in features"
-                :key="i"
-                cols="12"
-                md="6"
-                sm="12"
+              class="d-flex"
+              align-self="stretch"
+              v-for="({ image, title, text }, i) in features"
+              :key="i"
+              cols="12"
+              md="6"
+              sm="12"
             >
               <v-card
-                  class="py-12 px-4"
-                  color="grey lighten-5"
-                  flat
+                class="py-12 px-4"
+                color="grey lighten-5"
+                flat
               >
                 <v-theme-provider dark>
                   <div>
                     <v-avatar
-                        color="primary"
-                        size="120"
+                      color="primary"
+                      size="120"
                     >
                       <v-img
-                          contain
-                          style="border-radius: initial"
-                          max-height="60"
-                          :src="image"
-                      ></v-img>
+                        contain
+                        style="border-radius: initial"
+                        max-height="60"
+                        :src="image"
+                      />
                     </v-avatar>
                   </div>
                 </v-theme-provider>
 
                 <v-card-title
-                    class="justify-center font-weight-black text-uppercase"
-                    v-text="title"
-                ></v-card-title>
+                  class="justify-center font-weight-black text-uppercase"
+                  v-text="title"
+                />
 
                 <v-card-text
-                    class="subtitle-1"
-                    v-text="text"
-                >
-                </v-card-text>
+                  class="subtitle-1"
+                  v-text="text"
+                />
               </v-card>
             </v-col>
           </v-row>
         </v-container>
 
-        <div class="py-12"></div>
+        <div class="py-12" />
       </section>
 
       <section id="stats">
         <v-parallax
-            :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-            :src="require('./assets/ZED_Switch_2.png')"
+          :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
+          :src="require('./assets/ZED_Switch_2.png')"
         >
           <v-container fill-height>
             <v-row class="mx-auto">
               <v-col
-                  v-for="[value, title] of stats"
-                  :key="title"
-                  cols="12"
-                  md="3"
+                v-for="[value, title] of stats"
+                :key="title"
+                cols="12"
+                md="3"
               >
                 <div class="text-center">
                   <div
-                      class="display-3 font-weight-black mb-4"
-                      v-text="value"
-                  ></div>
+                    class="display-3 font-weight-black mb-4"
+                    v-text="value"
+                  />
 
                   <div
-                      class="title font-weight-regular text-uppercase"
-                      v-text="title"
-                  ></div>
+                    class="title font-weight-regular text-uppercase"
+                    v-text="title"
+                  />
                 </div>
               </v-col>
             </v-row>
@@ -251,16 +269,18 @@
       </section>
 
       <section
-          id="team"
-          class="primary"
+        id="team"
+        class="primary"
       >
-        <div class="py-12"></div>
+        <div class="py-12" />
 
         <v-container class="text-center">
-          <h2 class="display-2 font-weight-bold mb-3 white--text">The team</h2>
+          <h2 class="display-2 font-weight-bold mb-3 white--text">
+            The team
+          </h2>
           <v-responsive
-              class="mx-auto title font-weight-light mb-8 white--text"
-              max-width="720"
+            class="mx-auto title font-weight-light mb-8 white--text"
+            max-width="720"
           >
             Our multinational multidisciplinary team comprises scientists, engineers and commercial experts who bring
             years of technical and commercial experience to the table. As shown in the figure above, we follow a
@@ -268,82 +288,84 @@
           </v-responsive>
 
           <v-responsive
-              class="mx-auto mb-12"
-              width="56"
+            class="mx-auto mb-12"
+            width="56"
           >
-            <v-divider class="mb-1" style="border-color: white"></v-divider>
-            <v-divider style="border-color: white"></v-divider>
+            <v-divider
+              class="mb-1"
+              style="border-color: white"
+            />
+            <v-divider style="border-color: white" />
           </v-responsive>
 
           <v-row>
             <v-col
-                class="d-flex"
-                align-self="stretch"
-                v-for="({ image, name, text }, i) in team"
-                :key="i"
-                cols="12"
-                md="6"
-                sm="12"
+              class="d-flex"
+              align-self="stretch"
+              v-for="({ image, name, text }, i) in team"
+              :key="i"
+              cols="12"
+              md="6"
+              sm="12"
             >
               <v-card
-                  class="py-12 px-4"
-                  color="grey lighten-5"
-                  flat
+                class="py-12 px-4"
+                color="grey lighten-5"
+                flat
               >
                 <v-theme-provider dark>
                   <div>
                     <v-avatar
-                        size="250"
+                      size="250"
                     >
                       <v-img
-                          contain
-                          :src="image"
-                      ></v-img>
+                        contain
+                        :src="image"
+                      />
                     </v-avatar>
                   </div>
                 </v-theme-provider>
 
                 <v-card-title
-                    class="justify-center font-weight-black text-uppercase"
-                    v-text="name"
-                ></v-card-title>
+                  class="justify-center font-weight-black text-uppercase"
+                  v-text="name"
+                />
 
                 <v-card-text
-                    class="subtitle-1"
-                    v-text="text"
-                >
-                </v-card-text>
+                  class="subtitle-1"
+                  v-text="text"
+                />
               </v-card>
             </v-col>
           </v-row>
         </v-container>
 
-        <div class="py-12"></div>
+        <div class="py-12" />
       </section>
 
       <section id="lab">
         <v-parallax
-            :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-            :src="require('./assets/ZED_LAB.png')"
+          :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
+          :src="require('./assets/ZED_LAB.png')"
         >
           <v-container fill-height>
             <v-row class="mx-auto">
               <v-col
-                  v-for="[value, title] of stats"
-                  :key="title"
-                  cols="12"
-                  md="3"
+                v-for="[value, title] of stats"
+                :key="title"
+                cols="12"
+                md="3"
               >
                 <div class="text-center">
                   <div
-                      class="display-3 font-weight-black mb-4"
-                      v-text="value"
-                  ></div>
+                    class="display-3 font-weight-black mb-4"
+                    v-text="value"
+                  />
 
                   <div
-                      class="title font-weight-regular text-uppercase"
-                      v-text="title"
-                  ></div>
+                    class="title font-weight-regular text-uppercase"
+                    v-text="title"
+                  />
                 </div>
               </v-col>
             </v-row>
@@ -352,48 +374,50 @@
       </section>
 
       <section id="news">
-        <div class="py-12"></div>
+        <div class="py-12" />
 
         <v-container>
-          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">News</h2>
+          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">
+            News
+          </h2>
 
           <v-responsive
-              class="mx-auto mb-12"
-              width="56"
+            class="mx-auto mb-12"
+            width="56"
           >
-            <v-divider class="mb-1"></v-divider>
+            <v-divider class="mb-1" />
 
-            <v-divider></v-divider>
+            <v-divider />
           </v-responsive>
 
           <v-row>
             <v-col
-                v-for="({ src, text, title, link }, i) in articles"
-                :key="i"
-                cols="12"
-                md="4"
+              v-for="({ src, text, title, link }, i) in articles"
+              :key="i"
+              cols="12"
+              md="4"
             >
               <v-img
-                  :src="src"
-                  class="mb-4"
-                  height="275"
-                  max-width="100%"
-              ></v-img>
+                :src="src"
+                class="mb-4"
+                height="275"
+                max-width="100%"
+              />
 
               <h3
-                  class="font-weight-black mb-4 text-uppercase"
-                  v-text="title"
-              ></h3>
+                class="font-weight-black mb-4 text-uppercase"
+                v-text="title"
+              />
 
               <div
-                  class="title font-weight-light mb-5"
-                  v-text="text"
-              ></div>
+                class="title font-weight-light mb-5"
+                v-text="text"
+              />
 
               <v-btn
-                  class="ml-n4 font-weight-black"
-                  text
-                  :href="link"
+                class="ml-n4 font-weight-black"
+                text
+                :href="link"
               >
                 Continue Reading
               </v-btn>
@@ -401,36 +425,38 @@
           </v-row>
         </v-container>
 
-        <div class="py-12"></div>
+        <div class="py-12" />
       </section>
 
       <v-sheet
-          id="contact"
-          color="#333333"
-          dark
-          tag="section"
-          tile
+        id="contact"
+        color="#333333"
+        dark
+        tag="section"
+        tile
       >
-        <div class="py-12"></div>
+        <div class="py-12" />
 
         <v-container>
-
           <h2 class=" font-weight-bold mb-3 text-uppercase text-center">
             Contact Us
           </h2>
           <p class="text-center">
-            Email: <a style="color: white" :href="`mailto:${email}`">{{ email }}</a>
+            Email: <a
+              style="color: white"
+              :href="`mailto:${email}`"
+            >{{ email }}</a>
           </p>
         </v-container>
 
-        <div class="py-12"></div>
+        <div class="py-12" />
       </v-sheet>
     </v-main>
 
     <v-footer
-        class="justify-center"
-        color="#292929"
-        height="100"
+      class="justify-center"
+      color="#292929"
+      height="100"
     >
       <div class="title font-weight-light grey--text text--lighten-1 text-center">
         &copy; {{ (new Date()).getFullYear() }} — ZED
