@@ -5,7 +5,7 @@ import VueI18Next from '@panter/vue-i18next'
 
 Vue.use(VueI18Next)
 
-const url = Vue.isProduction ? 'https://raw.githubusercontent.com/ZED-IoT/ZED-IoT.github.io/main/public' : ''
+const url = process.env.NODE_ENV === 'production' ? 'https://raw.githubusercontent.com/ZED-IoT/ZED-IoT.github.io/main/public' : ''
 
 i18next
   .use(HttpApi)
