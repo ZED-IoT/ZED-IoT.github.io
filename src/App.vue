@@ -41,7 +41,7 @@
         style="cursor: pointer"
         onclick="window.scrollTo({  top: 0,  left: 0 });"
       />
-      <v-spacer />
+      <v-spacer/>
       <div v-if="$vuetify.breakpoint.mdAndUp">
         <v-btn
           text
@@ -103,7 +103,7 @@
       </section>
 
       <section id="about-us">
-        <div class="py-12" />
+        <div class="py-12"/>
 
         <v-container class="text-center">
           <h2 class="display-2 font-weight-bold mb-3">
@@ -114,9 +114,9 @@
             class="mx-auto mb-8"
             width="56"
           >
-            <v-divider class="mb-1" />
+            <v-divider class="mb-1"/>
 
-            <v-divider />
+            <v-divider/>
           </v-responsive>
 
           <v-responsive
@@ -140,7 +140,7 @@
           </v-responsive>
         </v-container>
 
-        <div class="py-12" />
+        <div class="py-12"/>
       </section>
 
       <section id="switch">
@@ -177,7 +177,7 @@
         id="features"
         class="grey lighten-3"
       >
-        <div class="py-12" />
+        <div class="py-12"/>
 
         <v-container class="text-center">
           <h2 class="display-2 font-weight-bold mb-3">
@@ -188,8 +188,8 @@
             class="mx-auto mb-12"
             width="56"
           >
-            <v-divider class="mb-1" />
-            <v-divider />
+            <v-divider class="mb-1"/>
+            <v-divider/>
           </v-responsive>
 
           <v-row>
@@ -237,7 +237,7 @@
           </v-row>
         </v-container>
 
-        <div class="py-12" />
+        <div class="py-12"/>
       </section>
 
       <section id="stats">
@@ -274,7 +274,7 @@
         id="team"
         class="primary"
       >
-        <div class="py-12" />
+        <div class="py-12"/>
 
         <v-container class="text-center">
           <h2 class="display-2 font-weight-bold mb-3 white--text">
@@ -297,7 +297,7 @@
               class="mb-1"
               style="border-color: white"
             />
-            <v-divider style="border-color: white" />
+            <v-divider style="border-color: white"/>
           </v-responsive>
 
           <v-row>
@@ -342,7 +342,7 @@
           </v-row>
         </v-container>
 
-        <div class="py-12" />
+        <div class="py-12"/>
       </section>
 
       <section id="lab">
@@ -376,7 +376,7 @@
       </section>
 
       <section id="news">
-        <div class="py-12" />
+        <div class="py-12"/>
 
         <v-container>
           <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">
@@ -387,9 +387,9 @@
             class="mx-auto mb-12"
             width="56"
           >
-            <v-divider class="mb-1" />
+            <v-divider class="mb-1"/>
 
-            <v-divider />
+            <v-divider/>
           </v-responsive>
 
           <v-row>
@@ -427,7 +427,7 @@
           </v-row>
         </v-container>
 
-        <div class="py-12" />
+        <div class="py-12"/>
       </section>
 
       <v-sheet
@@ -437,7 +437,7 @@
         tag="section"
         tile
       >
-        <div class="py-12" />
+        <div class="py-12"/>
 
         <v-container>
           <h2 class=" font-weight-bold mb-3 text-uppercase text-center">
@@ -445,13 +445,13 @@
           </h2>
           <p class="text-center">
             Email: <a
-              style="color: white"
-              :href="`mailto:${email}`"
-            >{{ email }}</a>
+            style="color: white"
+            :href="`mailto:${email}`"
+          >{{ email }}</a>
           </p>
         </v-container>
 
-        <div class="py-12" />
+        <div class="py-12"/>
       </v-sheet>
     </v-main>
 
@@ -482,11 +482,18 @@
       setFavicon (darkMode = false) {
         const favicon = darkMode ? 'favicon_white.ico' : 'favicon_black.ico'
         document.getElementById('favicon').setAttribute('href', favicon)
+      },
+      getTranslationObject (key) {
+        const translation = this.$t(key, { returnObjects: true })
+        return translation !== key ? translation : [];
       }
     },
     computed: {
+      email () {
+        return this.$t('email')
+      },
       menu () {
-        return this.$t('menu', { returnObjects: true })
+        return this.getTranslationObject('menu')
       },
       articles () {
         return _.merge(
@@ -504,7 +511,7 @@
               link: 'https://www.delta.tudelft.nl/article/why-smart-electronics-are-becoming-battery-free'
             }
           ],
-          this.$t('articles', { returnObjects: true })
+          this.getTranslationObject('articles')
         )
       },
       features () {
@@ -517,7 +524,7 @@
             { image: require('./assets/ZED_icon_White_Agriculture.png') },
             { image: require('./assets/ZED_icon_White_weatherstations.png') }
           ],
-          this.$t('features', { returnObjects: true })
+          this.getTranslationObject('features')
         )
       },
       team () {
@@ -530,14 +537,13 @@
             { image: require('./assets/Sujay.jpg') },
             { image: require('./assets/Josine.jpg') }
           ],
-          this.$t('team', { returnObjects: true })
+          this.getTranslationObject('team')
         )
       }
     },
     data () {
       return {
         drawer: false,
-        email: this.$t('email'),
         stats: []
       }
     }
