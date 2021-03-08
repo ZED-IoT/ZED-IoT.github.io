@@ -11,8 +11,16 @@ npm run serve
 ```
 
 ### Compiles and minifies for production
+In general this command should work but you need bash to run this (git bash also works).
+If windows is configured correct then it will open the default application.
+
+On Linux:
 ```
-npm run build
+.deploy/build.sh
+```
+On Windows:
+```
+.deploy\build.sh
 ```
 
 ### Lints and fixes files
