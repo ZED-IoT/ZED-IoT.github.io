@@ -5,6 +5,8 @@ import VueI18Next from '@panter/vue-i18next'
 
 Vue.use(VueI18Next)
 
+const url = Vue.isProduction ? 'https://raw.githubusercontent.com/ZED-IoT/ZED-IoT.github.io/main/public' : ''
+
 i18next
   .use(HttpApi)
   .init({
@@ -14,7 +16,7 @@ i18next
     defaultNS: 'translation',
     supportedLngs: ['en'],
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json',
+      loadPath: `${url}/locales/{{lng}}/{{ns}}.json`,
       crossDomain: true,
     },
   })
