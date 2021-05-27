@@ -49,16 +49,16 @@
   ],
   "team": [
     {
+      "name": "Dr. J.E.J. Schmitz",
+      "text": "Dr. John Schmitz recently retired as the dean of the faculty of Electrical Engineering, Mathematics and Computer Science (EEMCS or EWI in Dutch) at the Technical University of Delft. Before this, John was SVP and Chief Intellectual Property Officer of NXP Semiconductors. He is attributed as the co-founder of NXP Semiconductors and has immense technical, scientific and commercial experience. He is advising ZED as honorary president on both technical and commercial aspects where he directs, mentors and guides the team to becoming a successful startup.  "
+    },
+    {
       "name": "Dr. R.R. Venkatesha Prasad",
       "text": "Known fondly in the team as VP, Dr. Prasad is an associate professor at the Embedded and Networked Systems Group at TU, Delft. He spends three quarters of his time teaching and researching at the university and the other quarter working for ZED using his experience and network within the industry. He possesses 6 years of startup experience. In his startup venture, Esqube Communication Solutions, he developed an integrated VoIP--Telephony--web application suite. One real-time application he developed, to bridge VoIP calls anonymously, called Click-to-Talk, was appreciated by Ebay.com. The startup filed for eight patent applications and three PCT applications and was selected as top 100 IT innovators in India (NASSCOM 2006) and top 100 promising companies in Asia (RedHerring 2008). VP has more than 20 years of network, wireless, and IoT research expertise having mentored many PhDs and master students thus far. A never ending pool of ideas and enthusiasm, VP ensures that ZED never misses an opportunity either technical or financial."
     },
     {
       "name": "Ir. N.H. Hokke",
       "text": "Niels, a recent graduate supervised by VP, worked on the topic of batteryless wireless communication in his masters at TU Delft. Instead of starting as a PhD and adding more research papers into an already full archive, Niels instead believes in transforming state of the art research into real life tangible products for the benefit of society. As CEO, Niels is fully focusing all of his time on building up ZED as a vehicle which can move our innovation from the labs of the university onto the industrial factory floor where it can truly make a difference saving time and money for our clients."
-    },
-    {
-      "name": "Dr. J.E.J. Schmitz",
-      "text": "Dr. John Schmitz recently retired as the dean of the faculty of Electrical Engineering, Mathematics and Computer Science (EEMCS or EWI in Dutch) at the Technical University of Delft. Before this, John was SVP and Chief Intellectual Property Officer of NXP Semiconductors. He is attributed as the co-founder of NXP Semiconductors and has immense technical, scientific and commercial experience. He is advising ZED as honorary president on both technical and commercial aspects where he directs, mentors and guides the team to becoming a successful startup.  "
     },
     {
       "name": "Ir. S. Sharma",

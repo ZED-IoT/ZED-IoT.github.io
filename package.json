@@ -10,8 +10,8 @@
   "dependencies": {
     "@panter/vue-i18next": "^0.15.2",
     "core-js": "^3.6.5",
-    "i18next": "^19.9.1",
-    "i18next-http-backend": "^1.1.1",
+    "i18next": "^19.9.2",
+    "i18next-http-backend": "^1.2.6",
     "lodash": "^4.17.21",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
