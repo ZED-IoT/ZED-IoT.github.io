@@ -41,7 +41,7 @@
         style="cursor: pointer"
         onclick="window.scrollTo({  top: 0,  left: 0 });"
       />
-      <v-spacer/>
+      <v-spacer />
       <div v-if="$vuetify.breakpoint.mdAndUp">
         <v-btn
           text
@@ -103,7 +103,7 @@
       </section>
 
       <section id="about-us">
-        <div class="py-12"/>
+        <div class="py-12" />
 
         <v-container class="text-center">
           <h2 class="display-2 font-weight-bold mb-3">
@@ -114,9 +114,9 @@
             class="mx-auto mb-8"
             width="56"
           >
-            <v-divider class="mb-1"/>
+            <v-divider class="mb-1" />
 
-            <v-divider/>
+            <v-divider />
           </v-responsive>
 
           <v-responsive
@@ -140,7 +140,7 @@
           </v-responsive>
         </v-container>
 
-        <div class="py-12"/>
+        <div class="py-12" />
       </section>
 
       <section id="switch">
@@ -177,7 +177,7 @@
         id="features"
         class="grey lighten-3"
       >
-        <div class="py-12"/>
+        <div class="py-12" />
 
         <v-container class="text-center">
           <h2 class="display-2 font-weight-bold mb-3">
@@ -188,8 +188,8 @@
             class="mx-auto mb-12"
             width="56"
           >
-            <v-divider class="mb-1"/>
-            <v-divider/>
+            <v-divider class="mb-1" />
+            <v-divider />
           </v-responsive>
 
           <v-row>
@@ -237,7 +237,7 @@
           </v-row>
         </v-container>
 
-        <div class="py-12"/>
+        <div class="py-12" />
       </section>
 
       <section id="stats">
@@ -274,7 +274,7 @@
         id="team"
         class="primary"
       >
-        <div class="py-12"/>
+        <div class="py-12" />
 
         <v-container class="text-center">
           <h2 class="display-2 font-weight-bold mb-3 white--text">
@@ -297,7 +297,7 @@
               class="mb-1"
               style="border-color: white"
             />
-            <v-divider style="border-color: white"/>
+            <v-divider style="border-color: white" />
           </v-responsive>
 
           <v-row>
@@ -342,7 +342,7 @@
           </v-row>
         </v-container>
 
-        <div class="py-12"/>
+        <div class="py-12" />
       </section>
 
       <section id="lab">
@@ -376,7 +376,7 @@
       </section>
 
       <section id="news">
-        <div class="py-12"/>
+        <div class="py-12" />
 
         <v-container>
           <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">
@@ -387,47 +387,52 @@
             class="mx-auto mb-12"
             width="56"
           >
-            <v-divider class="mb-1"/>
+            <v-divider class="mb-1" />
 
-            <v-divider/>
+            <v-divider />
           </v-responsive>
 
           <v-row>
-            <v-col
-              v-for="({ src, text, title, link }, i) in articles"
-              :key="i"
-              cols="12"
-              md="4"
-            >
-              <v-img
-                :src="src"
-                class="mb-4"
-                height="275"
-                max-width="100%"
-              />
-
-              <h3
-                class="font-weight-black mb-4 text-uppercase"
-                v-text="title"
-              />
-
-              <div
-                class="title font-weight-light mb-5"
-                v-text="text"
-              />
-
-              <v-btn
-                class="ml-n4 font-weight-black"
-                text
-                :href="link"
+            <v-col>
+              <v-carousel
+                v-model="model"
+                :cycle="true"
+                :interval="20000"
+                :continuous="true"
+                hide-delimiters
+                :show-arrows="false"
               >
-                Continue Reading
-              </v-btn>
+                <v-carousel-item
+                  v-for="({ src, text, title, link }, i) in articles"
+                  :key="i"
+                  :src="src"
+                  :href="link"
+                >
+                  <v-row
+                    class="fill-height"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-col>
+                      <div
+                        class="text-h3 text-center"
+                        v-text="title"
+                      />
+                      <v-card style="bottom: 0; position: absolute; width: 100%">
+                        <v-card-text
+                          class="text-center"
+                          v-text="text"
+                        />
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                </v-carousel-item>
+              </v-carousel>
             </v-col>
           </v-row>
         </v-container>
 
-        <div class="py-12"/>
+        <div class="py-12" />
       </section>
 
       <v-sheet
@@ -437,21 +442,22 @@
         tag="section"
         tile
       >
-        <div class="py-12"/>
+        <div class="py-12" />
 
         <v-container>
           <h2 class=" font-weight-bold mb-3 text-uppercase text-center">
             Contact Us
           </h2>
           <p class="text-center">
-            Email: <a
-            style="color: white"
-            :href="`mailto:${email}`"
-          >{{ email }}</a>
+            Email:
+            <a
+              style="color: white"
+              :href="`mailto:${email}`"
+            >{{ email }}</a>
           </p>
         </v-container>
 
-        <div class="py-12"/>
+        <div class="py-12" />
       </v-sheet>
     </v-main>
 
@@ -485,7 +491,7 @@
       },
       getTranslationObject (key) {
         const translation = this.$t(key, { returnObjects: true })
-        return translation !== key ? translation : [];
+        return translation !== key ? translation : []
       }
     },
     computed: {
