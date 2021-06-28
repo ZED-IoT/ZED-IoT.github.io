@@ -536,9 +536,9 @@
       team () {
         return _.merge(
           [
+            { image: require('./assets/John.jpg') },
             { image: require('./assets/VP.jpg') },
             { image: require('./assets/Niels.jpg') },
-            { image: require('./assets/John.jpg') },
             { image: require('./assets/Suryansh.jpg') },
             { image: require('./assets/Sujay.jpg') },
             { image: require('./assets/Josine.jpg') }
