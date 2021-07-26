@@ -14,14 +14,31 @@ const routes = [
   {
     path: '/blog/:blog',
     name: 'Blog',
-    component: Blog,
+    component: Blog
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.afterEach((to) => {
+  setTimeout(() => {
+    const hash = to.hash
+    if (hash) {
+      const position = window.document.querySelector(hash).getBoundingClientRect()
+      const y = window.top.scrollY + position.top
+      const x = window.top.scrollX + position.left
+      if (y > 0) {
+        window.scrollTo({ top: y, left: x })
+      } else {
+        window.scrollTo({ top: position.top, left: position.left })
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0 })
+    }
+  }, 200)
 })
 
 export default router

@@ -36,7 +36,7 @@
                   class="align-self-end"
                   fab
                   outlined
-                  href="#about-us"
+                  :to="{ name: 'Home', hash: '#about-us' }"
                 >
                   <v-icon>mdi-chevron-double-down</v-icon>
                 </v-btn>
