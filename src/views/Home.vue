@@ -393,18 +393,9 @@
       articles () {
         return _.merge(
           [
-            {
-              src: require('./../assets/ZED_FYI_Team.jpg'),
-              link: 'https://www.airbus.com/newsroom/press-releases/en/2019/06/pioneering-student-team-from-the-netherlands-wins-airbus-fly-your-ideas-2019-global-competition.html'
-            },
-            {
-              src: require('./../assets/ZED_Impact_competition.png'),
-              link: 'https://4tuimpactchallenge.nl/news/384'
-            },
-            {
-              src: require('./../assets/ZED_Delta_Team.jpg'),
-              link: 'https://www.delta.tudelft.nl/article/why-smart-electronics-are-becoming-battery-free'
-            }
+            { src: require('./../assets/ZED_FYI_Team.jpg') },
+            { src: require('./../assets/ZED_Impact_competition.png') },
+            { src: require('./../assets/ZED_Delta_Team.jpg') }
           ],
           this.getTranslationObject('articles')
         )
