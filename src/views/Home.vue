@@ -333,42 +333,53 @@
           width="56"
         >
           <v-divider class="mb-1" />
-
           <v-divider />
         </v-responsive>
 
         <v-row>
-          <v-col
-            v-for="({ src, text, title, link }, i) in articles"
-            :key="i"
-            cols="12"
-            md="4"
+          <v-slide-group
+            show-arrows
           >
-            <v-img
-              :src="src"
-              class="mb-4"
-              height="275"
-              max-width="100%"
-            />
-
-            <h3
-              class="font-weight-black mb-4 text-uppercase"
-              v-text="title"
-            />
-
-            <div
-              class="title font-weight-light mb-5"
-              v-text="text"
-            />
-
-            <v-btn
-              class="ml-n4 font-weight-black"
-              text
-              :href="link"
+            <v-slide-item
+              v-for="({ src, text, title, link }, n) in articles"
+              :key="n"
             >
-              Continue Reading
-            </v-btn>
-          </v-col>
+              <v-card
+                class="ma-4 d-flex flex-column"
+                :width="calcWidth"
+              >
+                <v-img
+                  :src="src"
+                  class="mb-4"
+                  height="275"
+                  max-width="100%"
+                />
+                <div>
+                  <v-card-text>
+                    <h3
+                      class="font-weight-black mb-4 text-uppercase"
+                      v-text="title"
+                    />
+
+                    <div
+                      class="title font-weight-light mb-5"
+                      v-text="text"
+                    />
+                  </v-card-text>
+                  <v-divider class="border-white" />
+                  <v-card-actions class="mt-auto">
+                    <v-btn
+                      class="font-weight-black"
+                      text
+                      :href="link"
+                    >
+                      Continue Reading
+                    </v-btn>
+                  </v-card-actions>
+                </div>
+              </v-card>
+            </v-slide-item>
+          </v-slide-group>
         </v-row>
       </v-container>
 
@@ -425,6 +436,18 @@
           ],
           this.getTranslationObject('team')
         )
+      },
+      calcWidth () {
+        const map = { lg: 4, md: 3, sm: 2, xs: 1 }
+        const name = this.$vuetify.breakpoint.name
+        const t = name === "xl" ? "lg" : name;
+        const threshold = this.$vuetify.breakpoint.thresholds[t]
+        const width = this.$vuetify.breakpoint.width;
+        const calculatedWidth = threshold / map[t]
+        if (width < calculatedWidth) {
+          return width * 0.7
+        }
+        return threshold / map[t]
       }
     },
     data () {
@@ -437,5 +460,7 @@
 </script>
 
 <style lang="scss">
-
+  .border-white {
+    border-color: #fff !important;
+  }
 </style>
