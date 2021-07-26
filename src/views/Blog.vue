@@ -3,7 +3,14 @@
     <section>
       <v-container>
         <v-row justify="center">
-          <v-col>
+          <v-col
+            cols="12"
+            xl="6"
+            lg="8"
+            md="8"
+            sm="10"
+            xs="12"
+          >
             <vue-markdown :source="blog" />
           </v-col>
         </v-row>
