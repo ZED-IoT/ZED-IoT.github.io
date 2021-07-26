@@ -48,7 +48,7 @@
     </section>
 
     <section id="about-us">
-      <div class="py-12"/>
+      <div class="py-12" />
 
       <v-container class="text-center">
         <h2 class="display-2 font-weight-bold mb-3">
@@ -59,9 +59,9 @@
           class="mx-auto mb-8"
           width="56"
         >
-          <v-divider class="mb-1"/>
+          <v-divider class="mb-1" />
 
-          <v-divider/>
+          <v-divider />
         </v-responsive>
 
         <v-responsive
@@ -85,7 +85,7 @@
         </v-responsive>
       </v-container>
 
-      <div class="py-12"/>
+      <div class="py-12" />
     </section>
 
     <section id="switch">
@@ -122,7 +122,7 @@
       id="features"
       class="grey lighten-3"
     >
-      <div class="py-12"/>
+      <div class="py-12" />
 
       <v-container class="text-center">
         <h2 class="display-2 font-weight-bold mb-3">
@@ -133,8 +133,8 @@
           class="mx-auto mb-12"
           width="56"
         >
-          <v-divider class="mb-1"/>
-          <v-divider/>
+          <v-divider class="mb-1" />
+          <v-divider />
         </v-responsive>
 
         <v-row>
@@ -182,7 +182,7 @@
         </v-row>
       </v-container>
 
-      <div class="py-12"/>
+      <div class="py-12" />
     </section>
 
     <section id="stats">
@@ -219,7 +219,7 @@
       id="team"
       class="primary"
     >
-      <div class="py-12"/>
+      <div class="py-12" />
 
       <v-container class="text-center">
         <h2 class="display-2 font-weight-bold mb-3 white--text">
@@ -242,7 +242,7 @@
             class="mb-1"
             style="border-color: white"
           />
-          <v-divider style="border-color: white"/>
+          <v-divider style="border-color: white" />
         </v-responsive>
 
         <v-row>
@@ -287,7 +287,7 @@
         </v-row>
       </v-container>
 
-      <div class="py-12"/>
+      <div class="py-12" />
     </section>
 
     <section id="lab">
@@ -321,7 +321,7 @@
     </section>
 
     <section id="news">
-      <div class="py-12"/>
+      <div class="py-12" />
 
       <v-container>
         <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">
@@ -332,8 +332,8 @@
           class="mx-auto mb-12"
           width="56"
         >
-          <v-divider class="mb-1"/>
-          <v-divider/>
+          <v-divider class="mb-1" />
+          <v-divider />
         </v-responsive>
 
         <v-row>
@@ -380,7 +380,7 @@
         </v-row>
       </v-container>
 
-      <div class="py-12"/>
+      <div class="py-12" />
     </section>
   </v-main>
 </template>
