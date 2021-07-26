@@ -2,7 +2,7 @@
   <div>
     <v-parallax
       class="fill-height block"
-      :src="require('../assets/ZED_FYI_Price.jpg')"
+      :src="require('./../assets/ZED_FYI_Price.jpg')"
     >
       <div class="mx-auto">
         <h1 class="text-h1 text-center">
