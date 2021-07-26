@@ -1,24 +1,27 @@
 {
   "email": "info@ZED-IoT.com",
   "menu": [
-    { "text": "About us", "link": "#about-us" },
-    { "text": "Features", "link": "#features" },
-    { "text": "The team", "link": "#team" },
-    { "text": "News", "link": "#news" },
-    { "text": "Contact", "link": "#contact" }
+    { "text": "About us", "link": "/#about-us" },
+    { "text": "Features", "link": "/#features" },
+    { "text": "The team", "link": "/#team" },
+    { "text": "News", "link": "/#news" },
+    { "text": "Contact", "link": "/#contact" }
   ],
   "articles": [
     {
       "title": "Winning the Airbus FYI competition",
-      "text": "Under the name of Zero Heroes, ZED has won the prestigious Airbus Fly Your Ideas price. From 300 steams ZED convinced the jury with their energy harvesting solutions inside aircrafts."
+      "text": "Under the name of Zero Heroes, ZED has won the prestigious Airbus Fly Your Ideas price. From 300 steams ZED convinced the jury with their energy harvesting solutions inside aircrafts.",
+      "link": "/blog/airbus-competition"
     },
     {
       "title": "Winning the 4TU Impact challenge",
-      "text": "After wining the TU-Delft impact competition, ZED wins the national 4TU Impact challenge. Winning tickets to the World Expo in Dubai, where ZED will join the Dutch trade delegation representing the Netherlands."
+      "text": "After wining the TU-Delft impact competition, ZED wins the national 4TU Impact challenge. Winning tickets to the World Expo in Dubai, where ZED will join the Dutch trade delegation representing the Netherlands.",
+      "link": "https://4tuimpactchallenge.nl/news/384"
     },
     {
       "title": "Delta, TuDelft article",
-      "text": "Read why smart electronics are becoming battery free."
+      "text": "Read why smart electronics are becoming battery free.",
+      "link": "https://www.delta.tudelft.nl/article/why-smart-electronics-are-becoming-battery-free"
     }
   ],
   "features": [
