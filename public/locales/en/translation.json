@@ -1,11 +1,11 @@
 {
   "email": "info@ZED-IoT.com",
   "menu": [
-    { "text": "About us", "link": "#about-us" },
-    { "text": "Features", "link": "#features" },
-    { "text": "The team", "link": "#team" },
-    { "text": "News", "link": "#news" },
-    { "text": "Contact", "link": "#contact" }
+    { "text": "About us", "link": "/#about-us" },
+    { "text": "Features", "link": "/#features" },
+    { "text": "The team", "link": "/#team" },
+    { "text": "News", "link": "/#news" },
+    { "text": "Contact", "link": "/#contact" }
   ],
   "articles": [
     {

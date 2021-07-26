@@ -39,9 +39,9 @@
         max-width="200"
         :src="require('./assets/ZED_Logo_02.png')"
         style="cursor: pointer"
-        onclick="window.scrollTo({  top: 0,  left: 0 });"
+        @click="goHome"
       />
-      <v-spacer />
+      <v-spacer/>
       <div v-if="$vuetify.breakpoint.mdAndUp">
         <v-btn
           text
@@ -54,7 +54,7 @@
       </div>
     </v-app-bar>
 
-    <router-view />
+    <router-view/>
 
     <v-sheet
       id="contact"
@@ -63,7 +63,7 @@
       tag="section"
       tile
     >
-      <div class="py-12" />
+      <div class="py-12"/>
 
       <v-container>
         <h2 class=" font-weight-bold mb-3 text-uppercase text-center">
@@ -78,7 +78,7 @@
         </p>
       </v-container>
 
-      <div class="py-12" />
+      <div class="py-12"/>
     </v-sheet>
 
     <v-footer
@@ -110,6 +110,11 @@
       getTranslationObject (key) {
         const translation = this.$t(key, { returnObjects: true })
         return translation !== key ? translation : []
+      },
+      goHome () {
+        this.$router.push({ name: 'Home' }).catch(() => {
+          window.scrollTo({ top: 0, left: 0 })
+        })
       }
     },
     computed: {

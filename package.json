@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@adapttive/vue-markdown": "^4.0.1",
     "@panter/vue-i18next": "^0.15.2",
     "core-js": "^3.6.5",
     "i18next": "^19.9.2",
