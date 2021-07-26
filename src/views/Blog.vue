@@ -3,7 +3,7 @@
     <section>
       <v-container>
         <v-row justify="center">
-          <v-col md="6">
+          <v-col>
             <vue-markdown :source="blog" />
           </v-col>
         </v-row>

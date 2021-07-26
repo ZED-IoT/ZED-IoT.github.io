@@ -48,7 +48,7 @@
     </section>
 
     <section id="about-us">
-      <div class="py-12" />
+      <div class="py-12"/>
 
       <v-container class="text-center">
         <h2 class="display-2 font-weight-bold mb-3">
@@ -59,9 +59,9 @@
           class="mx-auto mb-8"
           width="56"
         >
-          <v-divider class="mb-1" />
+          <v-divider class="mb-1"/>
 
-          <v-divider />
+          <v-divider/>
         </v-responsive>
 
         <v-responsive
@@ -85,7 +85,7 @@
         </v-responsive>
       </v-container>
 
-      <div class="py-12" />
+      <div class="py-12"/>
     </section>
 
     <section id="switch">
@@ -122,7 +122,7 @@
       id="features"
       class="grey lighten-3"
     >
-      <div class="py-12" />
+      <div class="py-12"/>
 
       <v-container class="text-center">
         <h2 class="display-2 font-weight-bold mb-3">
@@ -133,8 +133,8 @@
           class="mx-auto mb-12"
           width="56"
         >
-          <v-divider class="mb-1" />
-          <v-divider />
+          <v-divider class="mb-1"/>
+          <v-divider/>
         </v-responsive>
 
         <v-row>
@@ -182,7 +182,7 @@
         </v-row>
       </v-container>
 
-      <div class="py-12" />
+      <div class="py-12"/>
     </section>
 
     <section id="stats">
@@ -219,7 +219,7 @@
       id="team"
       class="primary"
     >
-      <div class="py-12" />
+      <div class="py-12"/>
 
       <v-container class="text-center">
         <h2 class="display-2 font-weight-bold mb-3 white--text">
@@ -242,7 +242,7 @@
             class="mb-1"
             style="border-color: white"
           />
-          <v-divider style="border-color: white" />
+          <v-divider style="border-color: white"/>
         </v-responsive>
 
         <v-row>
@@ -287,7 +287,7 @@
         </v-row>
       </v-container>
 
-      <div class="py-12" />
+      <div class="py-12"/>
     </section>
 
     <section id="lab">
@@ -321,7 +321,7 @@
     </section>
 
     <section id="news">
-      <div class="py-12" />
+      <div class="py-12"/>
 
       <v-container>
         <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">
@@ -332,8 +332,8 @@
           class="mx-auto mb-12"
           width="56"
         >
-          <v-divider class="mb-1" />
-          <v-divider />
+          <v-divider class="mb-1"/>
+          <v-divider/>
         </v-responsive>
 
         <v-row>
@@ -345,7 +345,7 @@
               :key="n"
             >
               <v-card
-                class="ma-4 d-flex flex-column"
+                class="ma-4 card-outter"
                 :width="calcWidth"
               >
                 <v-img
@@ -354,36 +354,33 @@
                   height="275"
                   max-width="100%"
                 />
-                <div>
-                  <v-card-text>
-                    <h3
-                      class="font-weight-black mb-4 text-uppercase"
-                      v-text="title"
-                    />
+                <v-card-text>
+                  <h3
+                    class="font-weight-black mb-4 text-uppercase"
+                    v-text="title"
+                  />
 
-                    <div
-                      class="title font-weight-light mb-5"
-                      v-text="text"
-                    />
-                  </v-card-text>
-                  <v-divider class="border-white" />
-                  <v-card-actions class="mt-auto">
-                    <v-btn
-                      class="font-weight-black"
-                      text
-                      :href="link"
-                    >
-                      Continue Reading
-                    </v-btn>
-                  </v-card-actions>
-                </div>
+                  <div
+                    class="title font-weight-light mb-5"
+                    v-text="text"
+                  />
+                </v-card-text>
+                <v-card-actions class="card-actions">
+                  <v-btn
+                    class="font-weight-black"
+                    text
+                    :href="link"
+                  >
+                    Continue Reading
+                  </v-btn>
+                </v-card-actions>
               </v-card>
             </v-slide-item>
           </v-slide-group>
         </v-row>
       </v-container>
 
-      <div class="py-12" />
+      <div class="py-12"/>
     </section>
   </v-main>
 </template>
@@ -440,9 +437,9 @@
       calcWidth () {
         const map = { lg: 4, md: 3, sm: 2, xs: 1 }
         const name = this.$vuetify.breakpoint.name
-        const t = name === "xl" ? "lg" : name;
+        const t = name === 'xl' ? 'lg' : name
         const threshold = this.$vuetify.breakpoint.thresholds[t]
-        const width = this.$vuetify.breakpoint.width;
+        const width = this.$vuetify.breakpoint.width
         const calculatedWidth = threshold / map[t]
         if (width < calculatedWidth) {
           return width * 0.7
@@ -462,5 +459,13 @@
 <style lang="scss">
   .border-white {
     border-color: #fff !important;
+  }
+  .card-outter {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  .card-actions {
+    position: absolute;
+    bottom: 0;
   }
 </style>
