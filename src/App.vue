@@ -41,7 +41,7 @@
         style="cursor: pointer"
         @click="goHome"
       />
-      <v-spacer/>
+      <v-spacer />
       <div v-if="$vuetify.breakpoint.mdAndUp">
         <v-btn
           text
@@ -54,7 +54,7 @@
       </div>
     </v-app-bar>
 
-    <router-view/>
+    <router-view />
 
     <v-sheet
       id="contact"
@@ -63,7 +63,7 @@
       tag="section"
       tile
     >
-      <div class="py-12"/>
+      <div class="py-12" />
 
       <v-container>
         <h2 class=" font-weight-bold mb-3 text-uppercase text-center">
@@ -78,7 +78,7 @@
         </p>
       </v-container>
 
-      <div class="py-12"/>
+      <div class="py-12" />
     </v-sheet>
 
     <v-footer

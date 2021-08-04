@@ -369,7 +369,7 @@
                   <v-btn
                     class="font-weight-black"
                     text
-                    :href="link"
+                    :to="link"
                   >
                     Continue Reading
                   </v-btn>
@@ -403,6 +403,8 @@
           [
             { src: require('./../assets/ZED_FYI_Team.jpg') },
             { src: require('./../assets/ZED_Impact_competition.png') },
+            { src: require('./../assets/ZED_Delta_Team.jpg') },
+            { src: require('./../assets/ZED_Delta_Team.jpg') },
             { src: require('./../assets/ZED_Delta_Team.jpg') }
           ],
           this.getTranslationObject('articles')
