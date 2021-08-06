@@ -399,16 +399,7 @@
     },
     computed: {
       articles () {
-        return _.merge(
-          [
-            { src: require('./../assets/ZED_FYI_Team.jpg') },
-            { src: require('./../assets/ZED_Impact_competition.png') },
-            { src: require('./../assets/ZED_Delta_Team.jpg') },
-            { src: require('./../assets/ZED_Delta_Team.jpg') },
-            { src: require('./../assets/ZED_Delta_Team.jpg') }
-          ],
-          this.getTranslationObject('articles')
-        )
+        return this.getTranslationObject('articles');
       },
       features () {
         return _.merge(
