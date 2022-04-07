@@ -14,5 +14,5 @@ jobs:
         with:
           node-version: 16.x
 
-      - run: npm ci --production
+      - run: npm ci --no-optional
       - run: npm run build
