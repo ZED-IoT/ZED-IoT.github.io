@@ -12,31 +12,36 @@
       "title": "Winning the Airbus FYI competition",
       "text": "Under the name of Zero Heroes, ZED has won the prestigious Airbus Fly Your Ideas price. From 300 steams ZED convinced the jury with their energy harvesting solutions inside aircrafts.",
       "link": "blog/airbus-competition",
-      "src": "/assets/ZED_FYI_Team.jpg"
+      "src": "/assets/ZED_FYI_Team.jpg",
+      "date": "01/01/2020"
     },
     {
       "title": "Winning the 4TU Impact challenge",
       "text": "After wining the TU-Delft impact competition, ZED wins the national 4TU Impact challenge. Winning tickets to the World Expo in Dubai, where ZED will join the Dutch trade delegation representing the Netherlands.",
       "link": "blog/4tu-impact-challenge",
-      "src": "/assets/ZED_Impact_competition.png"
+      "src": "/assets/ZED_Impact_competition.png",
+      "date": "02/01/2020"
     },
     {
       "title": "Delta, TuDelft article",
       "text": "Read why smart electronics are becoming battery free.",
       "link": "blog/smart-electronics",
-      "src": "/assets/ZED_Delta_Team.jpg"
+      "src": "/assets/ZED_Delta_Team.jpg",
+      "date": "03/01/2020"
     },
     {
       "title": "Zed, in airospace!",
       "text": "Read how we won the airbus competition",
       "link": "blog/zed-in-airospace",
-      "src": "/assets/ZED_FYI_Team.jpg"
+      "src": "/assets/ZED_FYI_Team.jpg",
+      "date": "04/01/2020"
     },
     {
       "title": "Zed is going to Dubai!",
       "text": "Read why we are going to dubai",
       "link": "blog/dubai",
-      "src": "/assets/ZED_Impact_competition.png"
+      "src": "/assets/ZED_Impact_competition.png",
+      "date": "05/01/2020"
     }
   ],
   "features": [
