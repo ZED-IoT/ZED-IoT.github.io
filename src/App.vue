@@ -12,7 +12,7 @@
           <v-list-item
             v-for="({text, link}, i) in menu"
             :key="i"
-            :to="{ name: 'home', hash: link }"
+            :to="{ name: 'Home', hash: link }"
             @click.stop="drawer = !drawer"
           >
             <v-list-item-title>{{ text }}</v-list-item-title>

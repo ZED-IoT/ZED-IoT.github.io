@@ -31,12 +31,12 @@ router.afterEach((to) => {
       const y = window.top.scrollY + position.top
       const x = window.top.scrollX + position.left
       if (y > 0) {
-        window.scrollTo({ top: y, left: x })
+        window.scrollTo({top: y, left: x})
       } else {
-        window.scrollTo({ top: position.top, left: position.left })
+        window.scrollTo({top: position.top, left: position.left})
       }
     } else {
-      window.scrollTo({ top: 0, left: 0 })
+      window.scrollTo({top: 0, left: 0})
     }
   }, 200)
 })
