@@ -46,6 +46,10 @@
   ],
   "features": [
     {
+      "title": "Space IoT",
+      "text": "The commercial space age is here. ZED's Low-cost & low-power satellite sub-systems allow for new space use-cases in smaller form-factors not seen before"
+    },
+    {
       "title": "Large scale Predictive Maintenance",
       "text": "Masses of sensors spread across large areas detecting abnormalities reducing down time of systems, only becomes feasible with low cost and low maintenance i.e. batteryless and wireless sensors."
     },
@@ -64,10 +68,6 @@
     {
       "title": "Precision Agriculture",
       "text": "Agriculture is becoming high tech, helping optimising yields. With the limitation of not being able to put wires into the ground, ZED’s wireless and batteryless device can be used to measure crop, soil and air quality throughout large fields."
-    },
-    {
-      "title": "Perpetual Weather Stations",
-      "text": "With self powered weather stations from ZED throughout the city, the much needed fine-grained data can be collected, improving weather predictions."
     }
   ],
   "team": [
@@ -77,7 +77,7 @@
     },
     {
       "name": "Dr. R.R. Venkatesha Prasad",
-      "text": "Known fondly in the team as VP, Dr. Prasad is an associate professor at the Embedded and Networked Systems Group at TU, Delft. He spends three quarters of his time teaching and researching at the university and the other quarter working for ZED using his experience and network within the industry. He possesses 6 years of startup experience. In his startup venture, Esqube Communication Solutions, he developed an integrated VoIP--Telephony--web application suite. One real-time application he developed, to bridge VoIP calls anonymously, called Click-to-Talk, was appreciated by Ebay.com. The startup filed for eight patent applications and three PCT applications and was selected as top 100 IT innovators in India (NASSCOM 2006) and top 100 promising companies in Asia (RedHerring 2008). VP has more than 20 years of network, wireless, and IoT research expertise having mentored many PhDs and master students thus far. A never ending pool of ideas and enthusiasm, VP ensures that ZED never misses an opportunity either technical or financial."
+      "text": "Known fondly in the team as VP, Dr. Prasad is an associate professor at the Embedded and Networked Systems Group at TU, Delft. He spends three quarters of his time teaching and researching at the university and the other quarter working for ZED using his experience and network within the industry. He possesses 6 years of startup experience. In his startup venture, Esqube Communication Solutions, he developed an integrated VoIP--Telephony--web application suite, called Click-to-Talk. The startup filed for eight patent applications and three PCT applications and was selected as top 100 IT innovators in India (NASSCOM 2006) and top 100 promising companies in Asia (RedHerring 2008). VP has more than 20 years of network, wireless, and IoT research expertise having mentored many PhDs and master students thus far. A never ending pool of ideas and enthusiasm, VP ensures that ZED never misses an opportunity either technical or financial."
     },
     {
       "name": "Ir. N.H. Hokke",

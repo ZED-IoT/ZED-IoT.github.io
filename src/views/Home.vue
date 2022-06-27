@@ -74,7 +74,7 @@
           <br>
           <br>
           From large scale predictive maintenance to precision agriculture,
-          or from perpetual weather stations to inventory management.
+          or from perpetual weather stations to space IoT.
           ZED specializes in customizing solutions based on the clients needs and aids in a seamless integration into
           existing systems.
           <br>
@@ -161,7 +161,7 @@
                     <v-img
                       contain
                       style="border-radius: initial"
-                      max-height="60"
+                      max-height="80"
                       :src="image"
                     />
                   </v-avatar>
@@ -410,12 +410,12 @@
       features () {
         return _.merge(
           [
+            { image: require('./../assets/ZED_icon_white_satellite.png') },
             { image: require('./../assets/ZED_icon_White_Maintenance.png') },
             { image: require('./../assets/ZED_icon_White_Transportation.png') },
             { image: require('./../assets/ZED_icon_White_Inventory.png') },
             { image: require('./../assets/ZED_icon_White_Detection.png') },
-            { image: require('./../assets/ZED_icon_White_Agriculture.png') },
-            { image: require('./../assets/ZED_icon_White_weatherstations.png') }
+            { image: require('./../assets/ZED_icon_White_Agriculture.png') }
           ],
           this.getTranslationObject('features')
         )
