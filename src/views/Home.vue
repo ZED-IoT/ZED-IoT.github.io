@@ -341,7 +341,7 @@
             show-arrows
           >
             <v-slide-item
-              v-for="({ src, text, title, link }, n) in articles"
+              v-for="({date, src, text, title, link }, n) in articles.slice().reverse()"
               :key="n"
             >
               <v-card
@@ -374,6 +374,12 @@
                     Continue Reading
                   </v-btn>
                 </v-card-actions>
+                <v-card-text>
+                  <div
+                    class="card-date ma-4 font-weight-light"
+                    v-text="date"
+                  />
+                </v-card-text>
               </v-card>
             </v-slide-item>
           </v-slide-group>
@@ -460,5 +466,10 @@
   .card-actions {
     position: absolute;
     bottom: 0;
+  }
+  .card-date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 </style>
