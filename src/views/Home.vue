@@ -341,7 +341,7 @@
             show-arrows
           >
             <v-slide-item
-              v-for="({date, src, text, title, link }, n) in articles.slice().reverse()"
+              v-for="({date, src, text, title, link }, n) in articles"
               :key="n"
             >
               <v-card
