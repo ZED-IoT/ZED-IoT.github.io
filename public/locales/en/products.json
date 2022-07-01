@@ -2,6 +2,7 @@
   "GNSS-receiver": {
     "product-title": "GNSS solution for nano satellite applications",
     "product-text": "This flight proven Satellite Positioning System supports both GPS and GLONASS using the L1 band. With a cold start TTFF of just 30 seconds and a hot start of 1 second this module has a maximum power consumption of only 300 mW.",
+    "product-email-msg": "subject=GPS%20Module%20Quotation&body=Dear%20ZED,%0A%0AI%20would%20like%20to%20receive%20a%20quotation%20for%20the%20satellite%20GPS%20module.",
     "product-image1": "/assets/gps_module.png",
     "product-image2": "/assets/gps_module.png",
     "specifications": [

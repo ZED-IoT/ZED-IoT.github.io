@@ -11,7 +11,7 @@
             sm="10"
             xs="12"
           >
-            <vue-markdown :source="blog" />
+            <vue-markdown :source="blog"/>
           </v-col>
         </v-row>
       </v-container>
@@ -20,24 +20,24 @@
 </template>
 
 <script>
-  import VueMarkdown from '@adapttive/vue-markdown'
+import VueMarkdown from '@adapttive/vue-markdown'
 
-  export default {
-    name: 'Blog',
-    components: {
-      VueMarkdown
-    },
-    methods: {
-      getTranslationObject () {
-        const key = this.$route.params.blog
-        const translation = this.$t(`blog:${key}`, { returnObjects: true })
-        return translation !== key ? translation : ""
-      }
-    },
-    computed: {
-      blog () {
-        return this.getTranslationObject()
-      }
+export default {
+  name: 'Blog',
+  components: {
+    VueMarkdown
+  },
+  methods: {
+    getTranslationObject() {
+      const blog_key = this.$route.params.blog
+      const object = this.$t(`blog:${blog_key}`, {returnObjects: true})
+      return object !== blog_key ? object : ""
+    }
+  },
+  computed: {
+    blog() {
+      return this.getTranslationObject()
     }
   }
+}
 </script>

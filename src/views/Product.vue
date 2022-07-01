@@ -1,6 +1,6 @@
 <template>
   <v-main>
-    <section>
+    <section v-show="jsonisloaded">
       <div class="py-12" />
       <v-container class="text-center">
         <v-row class="justify-center flex-wrap-reverse">
@@ -30,7 +30,7 @@
               color="primary"
               large
               width="300"
-              :href="`mailto:${email}?subject=GPS%20Module%20Quotation&body=Dear%20ZED,%0A%0AI%20would%20like%20to%20receive%20a%20quotation%20for%20the%20satellite%20GPS%20module.`"
+              :href="`mailto:${email}?${product_email_msg}`"
             >
               Request quotation now!
             </v-btn>
@@ -119,9 +119,14 @@ export default {
   methods: {
     getTranslationObject (key) {
       const product_key = this.$route.params.product
-      const translation = this.$t(`products:${product_key}.${key}`, { returnObjects: true })
-      return translation !== (product_key + '.' + key) ? translation : ""
-    }
+      const object = this.$t(`products:${product_key}.${key}`, { returnObjects: true })
+      if(object !== (product_key + '.' + key)){
+        this.jsonisloaded = true
+        return object
+      }else{
+        return ""
+      }
+    },
   },
   computed: {
     email () {
@@ -133,6 +138,9 @@ export default {
     product_text () {
       return this.getTranslationObject('product-text');
     },
+    product_email_msg () {
+      return this.getTranslationObject('product-email-msg');
+    },
     product_image1 () {
       return this.getTranslationObject('product-image1');
     },
@@ -141,7 +149,12 @@ export default {
     },
     product_specifications () {
       return this.getTranslationObject('specifications');
-    },
+    }
   },
+  data(){
+    return {
+      jsonisloaded: false
+    }
+  }
 }
 </script>
