@@ -12,7 +12,7 @@ i18next
   .init({
     lng: 'en',
     fallbackLng: 'en',
-    ns: ['translation', 'blog'],
+    ns: ['translation', 'blog', 'products'],
     defaultNS: 'translation',
     supportedLngs: ['en'],
     backend: {

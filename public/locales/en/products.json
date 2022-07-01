@@ -1,0 +1,21 @@
+{
+  "GNSS-receiver": {
+    "product-title": "GNSS solution for nano satellite applications",
+    "product-text": "This flight proven Satellite Positioning System supports both GPS and GLONASS using the L1 band. With a cold start TTFF of just 30 seconds and a hot start of 1 second this module has a maximum power consumption of only 300 mW.",
+    "product-image1": "/assets/gps_module.png",
+    "product-image2": "/assets/gps_module.png",
+    "specifications": [
+      "Supports both GPS and GLONASS using L1 band",
+      "30 second cold start TTFF",
+      "1 second hot start",
+      "10m accuracy for position (3σ) and 0.9m/s for velocity (3σ)",
+      "1Hz measurement update rate (Configurable up to 20Hz)",
+      "Supports both active and passive antennas",
+      "Maximum power consumption of 300mW",
+      "Supports antenna with SMA or U.FL connector",
+      "Micro D Sub male connector for I/O",
+      "Communication using the I2C protocol",
+      "70mm x 50mm form factor"
+    ]
+  }
+}

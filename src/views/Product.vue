@@ -15,13 +15,15 @@
           >
             <v-spacer class="flex-grow-1" />
 
-            <h2 class="text-left display-1 font-weight-bold mb-6">
-              GNSS solution for nano satellite applications
-            </h2>
+            <h2
+              class="text-left display-1 font-weight-bold mb-6"
+              v-text="product_title"
+            />
 
-            <body class="text-justify mb-12">
-              This flight proven Satellite Positioning System supports both GPS and GLONASS using the L1 band. With a cold start TTFF of just 30 seconds and a hot start of 1 second this module has a maximum power consumption of only 300 mW.
-            </body>
+            <body
+              class="text-justify mb-12"
+              v-text="product_text"
+            />
 
             <v-btn
               justify="space-around"
@@ -42,7 +44,7 @@
             sm="10"
           >
             <v-img
-              src="../assets/gps_module.png"
+              :src="product_image1"
             />
           </v-col>
         </v-row>
@@ -71,7 +73,7 @@
             sm="10"
           >
             <v-img
-              src="../assets/gps_module.png"
+              :src="product_image2"
             />
           </v-col>
           <v-col
@@ -86,7 +88,7 @@
             <v-spacer class="flex-grow-1" />
 
             <v-row
-              v-for="(specification, i) in specifications"
+              v-for="(specification, i) in product_specifications"
               :key="i"
               align="center"
               class="ma-2 flex-nowrap"
@@ -96,11 +98,12 @@
                 color="primary"
                 size="10"
               />
-              <div class="text-left text-wrap" v-text="specification" />
+              <div
+                class="text-left text-wrap"
+                v-text="specification"
+              />
             </v-row>
-
             <v-spacer class="flex-grow-1" />
-
           </v-col>
         </v-row>
         <div class="py-5" />
@@ -110,39 +113,35 @@
 </template>
 
 <script>
-// import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
   name: 'Product',
-  components: {
-    // VueMarkdown
-  },
   methods: {
-    getTranslationObject () {
-      const key = this.$route.params.blog
-      const translation = this.$t(`blog:${key}`, { returnObjects: true })
-      return translation !== key ? translation : ""
+    getTranslationObject (key) {
+      const product_key = this.$route.params.product
+      const translation = this.$t(`products:${product_key}.${key}`, { returnObjects: true })
+      return translation !== (product_key + '.' + key) ? translation : ""
     }
   },
   computed: {
     email () {
       return this.$t('email')
-    }
+    },
+    product_title () {
+      return this.getTranslationObject('product-title');
+    },
+    product_text () {
+      return this.getTranslationObject('product-text');
+    },
+    product_image1 () {
+      return this.getTranslationObject('product-image1');
+    },
+    product_image2 () {
+      return this.getTranslationObject('product-image2');
+    },
+    product_specifications () {
+      return this.getTranslationObject('specifications');
+    },
   },
-  data: () => ({
-    specifications: [
-      'Supports both GPS and GLONASS using L1 band',
-      '30 second cold start TTFF',
-      '1 second hot start',
-      '10m accuracy for position (3σ) and 0.9m/s for velocity (3σ)',
-      '1Hz measurement update rate (Configurable up to 20Hz)',
-      'Supports both active and passive antennas',
-      'Maximum power consumption of 300mW',
-      'Supports antenna with SMA or U.FL connector',
-      'Micro D Sub male connector for I/O',
-      'Communication using the I2C protocol',
-      '70mm x 50mm form factor',
-    ],
-  }),
 }
 </script>
