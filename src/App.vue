@@ -12,7 +12,7 @@
           <v-list-item
             v-for="({text, link}, i) in menu"
             :key="i"
-            :to="{ name: 'Home', hash: link }"
+            :to="{ name: 'HomePage', hash: link }"
             @click.stop="drawer = !drawer"
           >
             <v-list-item-title>{{ text }}</v-list-item-title>
@@ -47,7 +47,7 @@
           text
           v-for="({text, link}, i) in menu"
           :key="i"
-          :to="{ name: 'Home', hash: link }"
+          :to="{ name: 'HomePage', hash: link }"
         >
           {{ text }}
         </v-btn>
@@ -112,7 +112,7 @@
         return translation !== key ? translation : []
       },
       goHome () {
-        this.$router.push({ name: 'Home' }).catch(() => {
+        this.$router.push({ name: 'HomePage' }).catch(() => {
           window.scrollTo({ top: 0, left: 0 })
         })
       }

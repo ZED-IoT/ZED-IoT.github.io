@@ -23,7 +23,7 @@
 import VueMarkdown from '@adapttive/vue-markdown'
 
 export default {
-  name: 'Blog',
+  name: 'BlogPage',
   components: {
     VueMarkdown
   },

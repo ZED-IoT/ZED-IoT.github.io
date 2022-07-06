@@ -36,7 +36,7 @@
                   class="align-self-end"
                   fab
                   outlined
-                  :to="{ name: 'Home', hash: '#about-us' }"
+                  :to="{ name: 'HomePage', hash: '#about-us' }"
                 >
                   <v-icon>mdi-chevron-double-down</v-icon>
                 </v-btn>
@@ -170,13 +170,15 @@
 
               <v-card-title
                 class="justify-center font-weight-black text-uppercase"
-                v-text="title"
-              />
+              >
+                {{ title }}
+              </v-card-title>
 
               <v-card-text
                 class="subtitle-1"
-                v-text="text"
-              />
+              >
+                {{ text }}
+              </v-card-text>
             </v-card>
           </v-col>
         </v-row>
@@ -255,7 +257,7 @@
             md="6"
             sm="12"
           >
-            <v-card
+            <v-card-title
               class="py-12 px-4"
               color="grey lighten-5"
               flat
@@ -275,14 +277,16 @@
 
               <v-card-title
                 class="justify-center font-weight-black text-uppercase"
-                v-text="name"
-              />
+              >
+                {{ name }}
+              </v-card-title>
 
               <v-card-text
                 class="subtitle-1"
-                v-text="text"
-              />
-            </v-card>
+              >
+                {{ text }}
+              </v-card-text>
+            </v-card-title>
           </v-col>
         </v-row>
       </v-container>
@@ -395,7 +399,7 @@
   import _ from 'lodash'
 
   export default {
-    name: 'Home',
+    name: 'HomePage',
     components: {},
     methods: {
       getTranslationObject (key) {
